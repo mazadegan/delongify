@@ -23,7 +23,7 @@ func main() {
 	api := r.Group("/api")
 	api.GET("/ping", PingHandler)
 
-	r.Use(static.Serve("/", static.LocalFile("./views", true)))
+	r.Use(static.Serve("/", static.LocalFile("./delongify_frontend/dist", true)))
 
 	r.Run()
 }
