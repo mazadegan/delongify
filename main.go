@@ -24,10 +24,6 @@ type SlugURLPair struct {
 creation. */
 const SECONDS_TO_EXPIRATION = 60 * 5
 
-func HelloHandler(c *gin.Context) {
-	c.String(200, "Hello, world!")
-}
-
 /*	- Receives a url in the request body.
 	- Produces a unique 6-character slug for SlugURLPair.
 	- Inserts SlugURLPair into MongoDB Atlas database.
@@ -80,7 +76,6 @@ func main() {
 	// create default gin engine instance
 	r := gin.Default()
 
-	r.GET("/hello", HelloHandler)
 	r.GET("/:slug", RedirectToSlugURLPairHandler)
 
 	api := r.Group("/api")
