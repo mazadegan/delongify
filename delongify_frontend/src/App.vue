@@ -13,7 +13,7 @@ import DelongifiedLinkCard from './components/DelongifiedLinkCard.vue'
 
   function delongifyUrl(url) {
     isGenerating.value = true
-    axios.post("http://delongify.xyz/api/shorten", {
+    axios.post("http://www.delongify.xyz/api/shorten", {
       Url: url,
     })
     .then(function (res) {
