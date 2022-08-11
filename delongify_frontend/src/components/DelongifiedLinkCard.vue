@@ -13,7 +13,7 @@ function copy() {
 
 <template>
     <div class="flex flex-col w-full sm:w-2/3 md:w-3/5 lg:w-1/3 items-center py-4 px-6 bg-indigo-600 rounded-lg space-y-2 shadow">
-        <span class="text-sm opacity-75">{{longUrl}}</span>
+        <span class="w-full text-ellipsis overflow-hidden text-sm opacity-75">{{longUrl}}</span>
         <span class="px-3 py-1 bg-indigo-700 rounded-lg">www.delongify.xyz/{{slug}}</span>
         <span class="flex space-x-2">
             <Button color="indigo">
