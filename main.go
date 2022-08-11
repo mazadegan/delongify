@@ -5,6 +5,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/gin-gonic/contrib/cors"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -37,7 +38,7 @@ func ShortenUrlHandler(c *gin.Context) {
 		panic(err)
 	}
 	// Add 'http://' to beginning of url if not included
-	if strings.Index(slugURLPair.Url, "http://") != 0 {
+	if strings.Index(slugURLPair.Url, "http://") != 0 && strings.Index(slugURLPair.Url, "https://") != 0 {
 		slugURLPair.Url = "http://" + slugURLPair.Url
 	}
 	// Produce unique 6-character slug for slugURLPair.
@@ -75,6 +76,7 @@ func main() {
 	}
 	// create default gin engine instance
 	r := gin.Default()
+	r.Use(cors.Default())
 
 	r.GET("/:slug", RedirectToSlugURLPairHandler)
 
