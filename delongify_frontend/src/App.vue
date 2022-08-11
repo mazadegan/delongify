@@ -6,12 +6,7 @@
 import DelongifiedLinkCard from './components/DelongifiedLinkCard.vue'
   document.title = "Delongify | Home"
 
-  let slugs = ref([
-    {
-      slug: "lol",
-      url: "https://docs.google.com/document/d/1_F_qicoriB9FuF1KfwVc1RkpoQs_qeALOdqA6w4q7N8/edit"
-    }
-  ])
+  let slugs = ref([])
   // data
   let isGenerating = ref(false)
   let longUrl = ref("")
