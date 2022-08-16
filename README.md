@@ -7,7 +7,7 @@ Delongify is a link shortening microservice. It consists of two REST API endpoin
 ### POST
 #### `delongify.xyz/api/shorten`
 
-Takes the following json document in the request body.
+Takes the following json in the request body.
 
 ```json
 {
@@ -15,7 +15,7 @@ Takes the following json document in the request body.
 }
 ```
 
-A unique 6-character slug is produced and used to create a key-value pair with the supplied url. This key-value pair is stored in a MongoDB database. This is a proof of concept, so the key-value pairs are only stored for 24 hours before they are expired.
+A unique 6-character slug is produced and used to create a key-value pair with the supplied url. This key-value pair is stored in a MongoDB database. The key-value pairs are stored for 24 hours before they are expired.
 
 ### GET
 #### `delongify.xyz/{slug}`
