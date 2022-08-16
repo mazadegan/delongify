@@ -23,7 +23,7 @@ type SlugURLPair struct {
 
 /* All SlugURLPairs in the database should expire this many seconds after their
 creation. */
-const SECONDS_TO_EXPIRATION = 60 * 5
+const SECONDS_TO_EXPIRATION = 60 * 60 * 24 // 24 hours
 
 /*	- Receives a url in the request body.
 	- Produces a unique 6-character slug for SlugURLPair.
