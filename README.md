@@ -1,6 +1,6 @@
 # Delongify
 
-Delongify is a link shortening microservice. It consists of two REST API endpoints.
+Delongify is a link shortening service. It consists of two REST API endpoints.
 
 ## Endpoints
 
